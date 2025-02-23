@@ -1,0 +1,30 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "cvi build release",
+            "type": "shell",
+            "command": "C:/Program Files (x86)/National Instruments/CVI2017/compile.exe",
+            "args": [
+                "${workspaceFolder}/vscode-cvi-build.prj",
+                "-release",
+                "-config=Release"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": []            
+        },
+        {
+            "label": "run",
+            "type": "shell",
+            "command": "${workspaceFolder}/_build/vscode-cvi-build.exe",
+            "group": {
+                "kind": "test",
+                "isDefault": true
+            },
+            "problemMatcher": []
+        }
+    ]
+}
